@@ -1,4 +1,4 @@
-组件名称：ymPrompt消息提示组件 4.0
+ymPrompt消息提示组件 4.0
 ===============================
 
 *****
@@ -109,7 +109,6 @@
         handler: function() {}, //回调事件  
         maskAlphaColor: '#000', //遮罩透明色  
         maskAlpha: 0.1,     //遮罩透明度  
-
         iframe: false,      //iframe模式  
         icoCls: '',     //图标的样式  
         btn: null,      //按钮配置  
@@ -124,13 +123,11 @@
         showShadow:false,   //不显示阴影，只对IE有效  
         useSlide:false,     //不使用淡入淡出  
         slideCfg:{increment:0.3,interval:50},   //淡入淡出配置  
-    
         //按钮文本，可通过自定义这些属性实现本地化  
         closeTxt: '关闭',  
         okTxt:' 确 定 ',  
         cancelTxt:' 取 消 ',    
         msgCls:'ym-content',    //消息内容的样式  
-
         minBtn:true,        //是否显示最小化按钮  
         minTxt:'最小化',  
         maxBtn:true,        //是否显示最大化按钮  
@@ -164,23 +161,23 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
     **height：**消息框的高度，默认为185。  
     **title：**消息组件标题，默认为“标题”  
     **handler：**回调函数。当确定/取消/关闭按钮被点击时会触发该函数并传入点击的按钮标识。如ok代表确定，cancel代表取消，close代表关闭  
-    **maskAlphaColor：遮罩的颜色，默认为黑色。  
-    **maskAlpha：遮罩的透明度，默认为0.1。  
+    **maskAlphaColor：**遮罩的颜色，默认为黑色。  
+    **maskAlpha：**遮罩的透明度，默认为0.1。  
 
     **fixPosition：**设定是否弹出框随滚动条一起浮动，保持在屏幕的固定位置，默认为true  
     **dragOut：**设定是否允许拖出屏幕范围，默认为false。  
     **autoClose：**设定用户点击窗口中按钮后自动关闭窗口，默认为true（设定为false后程序中可以通过调用close方法关闭）。  
     **titleBar：**是否显示标题栏，默认显示。注意，如果没有标题栏需要自己在程序中控制关闭。
-    **showMask：**是否显示遮罩层，默认为true
+    **showMask：**是否显示遮罩层，默认为true  
     **winPos：**弹出窗口的位置，支持8种内置位置（c,l,t,r,b,lt,rt,lb,rb）及自定义窗口坐标,默认为c。  
     各参数意义：c:页面中间,l:页面左侧,t:页面顶部,r:页面右侧,b:页面顶部,lt:左上角,rt:右上角,lb:左下角,rb:右下角  
     **winAlpha：**弹出窗体拖动时的透明度，默认为0.8  
 
-    //以下三个参数主要用于win方法（当然你也可以通过设定这些覆盖前面四个消息类型的默认属性）。  
+    // 以下三个参数主要用于win方法（当然你也可以通过设定这些覆盖前面四个消息类型的默认属性）。  
     **iframe：**是否使用iframe方法加载内容，该属性如果为true或者object，组件则尝试将message内容作为url进行加载  
         (如果属性值为一个object，则将object的内容添加为iframe的属性，如`iframe:{id:'myId',name:'myName',src:'http://www.baidu.com'}` 则iframe的id为myId,name为myName,src为http://www.baidu.com)。默认为false。  
     **icoCls：**图标类型。传入的内容为className，具体写法可以参考ymprompt.css中对图标的定义方式。默认为空。  
-       btn：按钮定义。传入的是数组形式。每个按钮的格式为['按钮文本','按钮标识']，
+    **btn：**按钮定义。传入的是数组形式。每个按钮的格式为['按钮文本','按钮标识']，
        如`[['确定','ok'],['取消','cancel'],['关闭','close']]等。注意单个按钮应该是这样的：[['确定','ok']] ` 
     **closeBtn：**是否显示关闭按钮，默认为true（显示）。  
 
@@ -188,7 +185,7 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
     **useSlide：**是否启用弹出框的渐显渐隐效果，默认为false    
     **slideCfg：**渐变效果的配置信息,参数格式为object，属性包括incerment:透明度每次增加的值，interval:变化的速度。例如：`{incerment:0.3,interval:50}`。该参数仅在useSlide为true时有效  
 
-    //以下参数可用于对组件语言本地化，如用于英文等系统中  
+    // 以下参数可用于对组件语言本地化，如用于英文等系统中  
     **okTxt：**确定按钮的文本描述，默认为“确定”  
     **cancelTxt：**取消按钮的文本描述，默认为“取消”  
     **closeTxt：**关闭按钮的文本描述（鼠标放在关闭按钮上时显示），默认为“关闭”  
@@ -201,9 +198,9 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
     **allowSelect：**是否允许选择消息框内容，默认false  
     **allowRightMenu：**是否允许在消息框使用右键，默认false  
 
-5. 操作接口：
+5. 操作接口：  
 
-    **属性：** 
+    **属性：**  
     **version：**当前版本号 如：alert(ymPrompt.version)  
     **pubDate：**当前版本的发布日期 如：alert(ymPrompt.pubDate);  
     **cfg：**组件的当前的默认配置  
@@ -234,8 +231,8 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
 
 网站： http://www.ajaxbbs.net  
 作者： 闫威(yemoo|网者归来)  
-MSN：    yanwei8410(at)hotmail.com  
-E-Mail：netman8410(at)163.com  
-QQ:278384986  
+MSN：  yanwei8410(at)hotmail.com  
+Email：netman8410(at)163.com  
+QQ：   278384986  
 
 最后更新：2009-03-02
