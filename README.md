@@ -101,7 +101,8 @@ ymPrompt消息提示组件 4.0
    如：`ymPrompt.setDefaultCfg({maskAlpha:0.2,maskAlphaColor:'#00f'})`
    
    组件的所有配置项的默认值（对于没有设定的项将采用该配置项的默认值）：  
-   `{  
+```js
+   {  
         message: '内容',  //消息框按钮  
         width: 300,     //宽  
         height: 185,        //高  
@@ -134,7 +135,8 @@ ymPrompt消息提示组件 4.0
         maxTxt:'最大化',  
         allowSelect:false,  //是否允许选择消息框内容，默认不允许  
         allowRightMenu:false    //是否允许在消息框使用右键，默认不允许  
-   }`
+   }
+```
 4. 根据您的需要调用相应的消息函数：   
     ymPrompt.alert(参数) //消息提示类型  
     ymPrompt.succeedInfo(参数) //成功信息类型   
