@@ -1,4 +1,4 @@
-ymPrompt消息提示组件 4.0
+ymPrompt消息提示组件 4.1
 ===============================
 
 *****
@@ -33,7 +33,11 @@ ymPrompt消息提示组件 4.0
 
 *****
 
-4.0 版本更新内容：
+4.1版本更新内容（2013-03-09）：
+---------------
+* 增加disableDrag参数，可配置弹出层不可拖动。
+
+4.0 版本更新内容（2009-03-02）：
 ---------------
 * 实现当重复引入ymPrompt.js时，只执行一次组件解析。
 * 支持配置是否显示遮罩(showMask)。
@@ -115,6 +119,7 @@ ymPrompt消息提示组件 4.0
         btn: null,      //按钮配置  
         autoClose: true,    //点击关闭、确定等按钮后自动关闭  
         fixPosition: true,  //随滚动条滚动  
+        disableDrag: false,	 //是否禁止拖动弹出层，默认否
         dragOut: false,     //不允许拖出窗体范围  
         titleBar: true,     //显示标题栏  
         showMask: true,     //显示遮罩  
@@ -167,6 +172,7 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
     **maskAlpha：**遮罩的透明度，默认为0.1。  
 
     **fixPosition：**设定是否弹出框随滚动条一起浮动，保持在屏幕的固定位置，默认为true  
+    **disableDrag：**是否禁止拖动弹出层，默认否（false）。
     **dragOut：**设定是否允许拖出屏幕范围，默认为false。  
     **autoClose：**设定用户点击窗口中按钮后自动关闭窗口，默认为true（设定为false后程序中可以通过调用close方法关闭）    
     **titleBar：**是否显示标题栏，默认显示。注意，如果没有标题栏需要自己在程序中控制关闭  
@@ -228,13 +234,12 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
      
 ***
 
-**演示地址：**http://www.ajaxbbs.net/test/ymPrompt4.0/demo.html  
-**详细介绍及下载地址：**http://www.ajaxbbs.net/post/product/ymPrompt4.0.html
+**演示地址：**http://yanwei.me/ymPrompt/demo.html  
 
-网站： http://www.ajaxbbs.net  
+网站： https://github.com/yemoo/ymPrompt  
 作者： 闫威(yemoo|网者归来)  
 MSN：  yanwei8410(at)hotmail.com  
 Email：netman8410(at)163.com  
 QQ：   278384986  
 
-最后更新：2009-03-02
+最后更新：2013-03-09

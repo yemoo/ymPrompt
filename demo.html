@@ -202,6 +202,10 @@
 		<td class='code'>ymPrompt.alert({title:'fixPosition使用演示',message:'我不会随滚动条一起滚动',fixPosition:false})</td>
 	</tr>
 	<tr>
+		<td><input type="button" value="禁止拖动" onclick="ymPrompt.alert({title:'disableDrag使用演示',message:'该窗口不能拖动',disableDrag:true})" /></td>
+		<td class='code'>ymPrompt.alert({title:'disableDrag使用演示',message:'该窗口不能拖动',disableDrag:true})</td>
+	</tr>
+	<tr>
 		<td><input type="button" value="可在窗口外拖动" onclick="ymPrompt.alert({title:'dragOut使用演示',message:'我可以拖出到窗口可见区域以外',dragOut:true})" /></td>
 		<td class='code'>ymPrompt.alert({title:'dragOut使用演示',message:'我可以拖出到窗口可见区域以外',dragOut:true})</td>
 	</tr>
@@ -338,6 +342,7 @@
 			<br />&nbsp;&nbsp;&nbsp;btn: null,			//按钮配置
 			<br />&nbsp;&nbsp;&nbsp;autoClose: true,		//点击关闭、确定等按钮后自动关闭
 			<br />&nbsp;&nbsp;&nbsp;fixPosition: true,		//随滚动条滚动
+			<br />&nbsp;&nbsp;&nbsp;disableDrag: false,	//是否禁止拖动弹出层，默认否
 			<br />&nbsp;&nbsp;&nbsp;dragOut: false,			//不允许拖出窗体范围
 			<br />&nbsp;&nbsp;&nbsp;titleBar: true,			//显示标题栏
 			<br />&nbsp;&nbsp;&nbsp;showMask: true,			//显示遮罩
@@ -387,6 +392,7 @@
 				<li><strong>maskAlphaColor：</strong>遮罩的颜色，默认为黑色。 </li>
 				<li><strong>maskAlpha：</strong>遮罩的透明度，默认为0.1。<br/><br/> </li>
 				<li><strong>fixPosition：</strong>设定是否弹出框随滚动条一起浮动，保持在屏幕的固定位置，默认为true </li>
+				<li><strong>disableDrag：</strong>是否禁止拖动弹出层，默认否（false）</li>
 				<li><strong>dragOut：</strong>设定是否允许拖出屏幕范围，默认为false。 </li>
 				<li><strong>autoClose：</strong>设定用户点击窗口中按钮后自动关闭窗口，默认为true（设定为false后程序中可以通过调用close方法关闭）。</li>
 				<li><strong>titleBar：</strong>是否显示标题栏，默认显示。注意，如果没有标题栏需要自己在程序中控制关闭。</li>
