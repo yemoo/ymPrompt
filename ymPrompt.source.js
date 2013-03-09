@@ -12,8 +12,8 @@
 	var isArray = objType('Array'),
 	isObj = objType('Object'); //判断元素是否数组、object
 	window.ymPrompt = {
-		version: '4.0',
-		pubDate: '2009-03-02',
+		version: '4.1',
+		pubDate: '2013-03-09',
 		apply: function(o, c, d) {
 			if (d) ymPrompt.apply(o, d);
 			if (o && c && isObj(c)) for (var p in c) o[p] = c[p];
@@ -85,7 +85,7 @@
 		var html = [];
 		while (btn.length) html.push(btn.shift().html);
 		return html.join('&nbsp;&nbsp;');
-	}
+	};
 	/*默认显示配置及用户当前配置*/
 	var dftCfg = {
 		message: '内容',		//消息框内容
@@ -100,6 +100,7 @@
 		btn: null,				//消息框显示的按钮，默认无
 		autoClose: true,		//点击关闭、确定等按钮是否自动关闭，默认自动关闭
 		fixPosition: true,		//是否随滚动条滚动，默认是
+		disableDrag: false,		//是否禁止拖动弹出层，默认否
 		dragOut: false,			//是否允许拖出窗口范围，默认不允许
 		titleBar: true,			//是否显示标题栏，默认显示
 		showMask: true,			//是否显示遮罩，默认显示
@@ -139,7 +140,7 @@
 		/*获取scrollLeft和scrollTop，在fixed定位时返回0，0*/
 		var getScrollPos = function() {
 			return curCfg.fixPosition && useFixed ? [0, 0] : [rootEl.scrollLeft, rootEl.scrollTop];
-		}
+		};
 		/*保存窗口定位信息，弹出窗口相对页面左上角的坐标信息*/
 		var saveWinInfo = function() {
 			var pos = getScrollPos();
@@ -278,7 +279,8 @@
 			bindEl && (detachEvent("losecapture", uEvent, bindEl), bindEl.releaseCapture());
 		};
 		addEvent('mousedown',function(e) {
-			if ((e.srcElement || e.target).parentNode == ym_hTool) return false; //点击操作按钮不进行启用拖动处理
+			if (curCfg.disableDrag) return false;    // 禁止拖动 2013-03-09
+            if ((e.srcElement || e.target).parentNode == ym_hTool) return false; //点击操作按钮不进行启用拖动处理
 			filterWin(curCfg.winAlpha); //鼠标按下时窗体的透明度
 			/*鼠标与弹出框的左上角的位移差*/
 			ymPrompt.apply(dragVar, {
@@ -470,7 +472,7 @@
 						clearInterval(it);
 						curCfg.showShadow && setStyle(ym_shadow, 'display', '')
 					}
-				}
+				};
 				showFn();
 				var it = setInterval(showFn, curCfg.slideCfg.interval);
 			})();
@@ -489,7 +491,7 @@
 		}; //取得iframe
 		var getPage = function() {
 			return curCfg.iframe ? ym_body.firstChild: null
-		}
+		};
 		ymPrompt.apply(ymPrompt, {
 			close: destroy,
 			max: max,
