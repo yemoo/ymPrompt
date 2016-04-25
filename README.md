@@ -234,8 +234,6 @@ message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,au
      
 ***
 
-**演示地址：**http://yanwei.me/ymPrompt/demo.html  
-
 网站： https://github.com/yemoo/ymPrompt  
 作者： 闫威(yemoo|网者归来)  
 MSN：  yanwei8410(at)hotmail.com  
