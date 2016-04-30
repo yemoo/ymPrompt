@@ -34,44 +34,6 @@ ymPrompt消息提示组件 4.1
 2. 在页面中引入对应的皮肤文件的CSS，如：`<link rel="stylesheet" type="text/css" href="skin/qq/ymPrompt.css" />`
 3. 自定义组件的默认配置信息（此步骤可选，该方法可以在任意时间调用）  
 在页面的js中通过`ymPrompt.setDefaultCfg(cfg)`方法修改组件部分或全部的默认属性。如：`ymPrompt.setDefaultCfg({maskAlpha:0.2,maskAlphaColor:'#00f'})`
-<br><br>组件的所有配置项的默认值（对于没有设定的项将采用该配置项的默认值）：  
-```js
-{  
-    message: '内容',  //消息框按钮  
-    width: 300,     //宽  
-    height: 185,        //高  
-    title: '标题',        //消息框标题  
-    handler: function() {}, //回调事件  
-    maskAlphaColor: '#000', //遮罩透明色  
-    maskAlpha: 0.1,     //遮罩透明度  
-    iframe: false,      //iframe模式  
-    icoCls: '',     //图标的样式  
-    btn: null,      //按钮配置  
-    autoClose: true,    //点击关闭、确定等按钮后自动关闭  
-    fixPosition: true,  //随滚动条滚动  
-    disableDrag: false,	 //是否禁止拖动弹出层，默认否
-    dragOut: false,     //不允许拖出窗体范围  
-    titleBar: true,     //显示标题栏  
-    showMask: true,     //显示遮罩  
-    winPos: 'c',        //在页面中间显示  
-    winAlpha:0.8,       //拖动窗体时窗体的透明度  
-    closeBtn:true,      //是否显示关闭按钮  
-    showShadow:false,   //不显示阴影，只对IE有效  
-    useSlide:false,     //不使用淡入淡出  
-    slideCfg:{increment:0.3,interval:50},   //淡入淡出配置  
-    //按钮文本，可通过自定义这些属性实现本地化  
-    closeTxt: '关闭',  
-    okTxt:' 确 定 ',  
-    cancelTxt:' 取 消 ',    
-    msgCls:'ym-content',    //消息内容的样式  
-    minBtn:true,        //是否显示最小化按钮  
-    minTxt:'最小化',  
-    maxBtn:true,        //是否显示最大化按钮  
-    maxTxt:'最大化',  
-    allowSelect:false,  //是否允许选择消息框内容，默认不允许  
-    allowRightMenu:false    //是否允许在消息框使用右键，默认不允许  
-}
-```
 4. 根据您的需要调用相应的消息函数：
 ```js
 ymPrompt.alert(参数) //消息提示类型  
@@ -125,6 +87,45 @@ ymPrompt.win(参数) //自定义窗口类型
 **maxBtn：**是否显示最大化按钮，默认为false  
 **allowSelect：**是否允许选择消息框内容，默认false  
 **allowRightMenu：**是否允许在消息框使用右键，默认false
+
+## 组件配置项默认值
+```js
+{  
+    message: '内容',  //消息框按钮  
+    width: 300,     //宽  
+    height: 185,        //高  
+    title: '标题',        //消息框标题  
+    handler: function() {}, //回调事件  
+    maskAlphaColor: '#000', //遮罩透明色  
+    maskAlpha: 0.1,     //遮罩透明度  
+    iframe: false,      //iframe模式  
+    icoCls: '',     //图标的样式  
+    btn: null,      //按钮配置  
+    autoClose: true,    //点击关闭、确定等按钮后自动关闭  
+    fixPosition: true,  //随滚动条滚动  
+    disableDrag: false,	 //是否禁止拖动弹出层，默认否
+    dragOut: false,     //不允许拖出窗体范围  
+    titleBar: true,     //显示标题栏  
+    showMask: true,     //显示遮罩  
+    winPos: 'c',        //在页面中间显示  
+    winAlpha:0.8,       //拖动窗体时窗体的透明度  
+    closeBtn:true,      //是否显示关闭按钮  
+    showShadow:false,   //不显示阴影，只对IE有效  
+    useSlide:false,     //不使用淡入淡出  
+    slideCfg:{increment:0.3,interval:50},   //淡入淡出配置  
+    //按钮文本，可通过自定义这些属性实现本地化  
+    closeTxt: '关闭',  
+    okTxt:' 确 定 ',  
+    cancelTxt:' 取 消 ',    
+    msgCls:'ym-content',    //消息内容的样式  
+    minBtn:true,        //是否显示最小化按钮  
+    minTxt:'最小化',  
+    maxBtn:true,        //是否显示最大化按钮  
+    maxTxt:'最大化',  
+    allowSelect:false,  //是否允许选择消息框内容，默认不允许  
+    allowRightMenu:false    //是否允许在消息框使用右键，默认不允许  
+}
+```
 
 ## 操作接口
 - **属性：**  
