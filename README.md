@@ -29,8 +29,7 @@ ymPrompt消息提示组件 4.1
 20. 支持配置最大化、最小化、关闭按钮是否显示。
 
 
-调用方法及参数说明:
-----------------
+## 调用方法及参数说明:
 1. 在页面中引入ymPrompt.js。如：`<script type="text/javascript" src="ymPrompt.js"></script>`
 2. 在页面中引入对应的皮肤文件的CSS，如：`<link rel="stylesheet" type="text/css" href="skin/qq/ymPrompt.css" />`
 3. 自定义组件的默认配置信息（此步骤可选，该方法可以在任意时间调用）  
@@ -73,7 +72,6 @@ ymPrompt消息提示组件 4.1
     allowRightMenu:false    //是否允许在消息框使用右键，默认不允许  
 }
 ```
-
 4. 根据您的需要调用相应的消息函数：
 ```js
 ymPrompt.alert(参数) //消息提示类型  
@@ -82,11 +80,17 @@ ymPrompt.errorInfo(参数) //错误信息类型
 ymPrompt.confirmInfo(参数) //询问消息类型   
 ymPrompt.win(参数) //自定义窗口类型
 ```
-**参数传入方式包含两种：**
-<br>**第一种** 即传统的参数传入，按照顺序传入相应的参数值即可（一定要按照顺序），对于不需要设定的值请传入null。如`ymPrompt.alert('内容',null,null,'标题')`  
-*参数顺序：* message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,autoClose,fixPosition,dragOut,titleBar,showMask,winPos,winAlpha
-<br>**第二种** 即JSON的传入方式（推荐），需要指定字段名,没有顺序，根据需要设定相关属性。如`ymPrompt.alert({title:'标题',message:'内容'})`  
-<br>五个方法的参数个数及意义完全相同（所有参数均为可选，不传入则使用默认参数值）
+
+## 参数传入方式
+#### 第一种
+即传统的参数传入，按照顺序传入相应的参数值即可（一定要按照顺序），对于不需要设定的值请传入null。如`ymPrompt.alert('内容',null,null,'标题')`  
+**参数顺序：** message,width,height,title,handler,maskAlphaColor,maskAlpha,iframe,icoCls,btn,autoClose,fixPosition,dragOut,titleBar,showMask,winPos,winAlpha
+#### 第二种
+即JSON的传入方式（推荐），需要指定字段名,没有顺序，根据需要设定相关属性。如`ymPrompt.alert({title:'标题',message:'内容'})`  
+
+## 参数含义
+所有参数均为可选，不传则使用默认参数值
+
 **message：**消息组件要显示的内容，默认为“内容”。   
 **width：**消息框的宽度，默认为300。   
 **height：**消息框的高度，默认为185。  
@@ -122,7 +126,7 @@ ymPrompt.win(参数) //自定义窗口类型
 **allowSelect：**是否允许选择消息框内容，默认false  
 **allowRightMenu：**是否允许在消息框使用右键，默认false
 
-5. 操作接口
+## 操作接口
 - **属性：**  
  - **version：**当前版本号 如：`alert(ymPrompt.version)`
  - **pubDate：**当前版本的发布日期 如：`alert(ymPrompt.pubDate)`
@@ -141,5 +145,6 @@ ymPrompt.win(参数) //自定义窗口类型
   - **min()：**最小化弹出窗口  
   - **normal()：**窗口普通弹出状态
 
-6.&nbsp;&nbsp;其他说明：  
-如果觉得“对象.方法”的调用方式比较麻烦，可以采用如下方式简化调用：在调用之前设定var Alert=ymPrompt.alert。之后就可以使用Alert()的方式进行调用。  
+## 其他说明：  
+如果觉得“对象.方法”的调用方式比较麻烦，可以采用如下方式简化调用：  
+在调用之前设定var Alert=ymPrompt.alert。之后就可以使用Alert()的方式进行调用。  
