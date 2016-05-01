@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ymPrompt.js 消息提示组件
  * @author netman8410@163.com
  */
