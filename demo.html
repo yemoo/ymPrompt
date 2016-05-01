@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="ymPrompt.js"></script>
 	<link rel="stylesheet" id='skin' type="text/css" href="skin/qq/ymPrompt.css" />
 	<style type="text/css">
-		
+
 		html{
 			height:100%;width:100%;
 		}
@@ -18,7 +18,7 @@
 			margin:10px 0 0;padding:0;
 			font-size:14px;line-height:25px
 		}
-		
+
 		.help ul li{
 			margin:2px 0;list-style-type:square;line-height:1.5em
 		}
@@ -52,7 +52,7 @@
 		}
 		//ymPrompt.setDefaultCfg({slideShowHide:false});
 		ymPrompt.errorInfo({message:'初始化弹出一！',title:'错误提示',height:200,width:300,fixPosition:true,msgCls:'mycls',handler:function(){}})
-		
+
 		ymPrompt.alert({message:'初始化弹出二，<br>我可以最大化最小化',title:'hello!',maxBtn:true,minBtn:true,height:230,width:350});
 
 		window.onload=function(){
@@ -78,7 +78,7 @@
 	</script>
  </head>
  <body>
-	<h1>ymPrompt消息提示组件4.0版[2013-03-09]DEMO演示及使用简介</h1>	
+	<h1>ymPrompt消息提示组件4.0版[2013-03-09]DEMO演示及使用简介</h1>
 	<h3>页面IFRAME:</h3>
 	<iframe src="iframe.html" width="100%" height="60"></iframe><br />
 	<table width=100%>
@@ -88,7 +88,7 @@
 	页面文本2
 	</td>
 	<td>
-	<h3>页面Select选择框</h3>	
+	<h3>页面Select选择框</h3>
 	<select>
 		<option>下拉选项1</option>
 		<option>下拉选项2</option>
@@ -324,7 +324,7 @@
 		<li>在页面中引入ymPrompt.js。如：&lt;script type="text/javascript" src="ymPrompt.js"&gt;&lt;/script&gt;</li>
 		<li>在页面中引入对应的皮肤文件的CSS，如：&lt;link rel="stylesheet" type="text/css" href="skin/qq/ymPrompt.css" /&gt;</li>
 		<li>自定义组件的默认配置信息（<span style='color:#f00'>此步骤可选</span>，该方法可以在任意时间调用）
-			<br />页面的js中通过ymPrompt.setDefaultCfg(cfg)方法修改组件部分或全部的默认属性。 
+			<br />页面的js中通过ymPrompt.setDefaultCfg(cfg)方法修改组件部分或全部的默认属性。
 			<br />如：ymPrompt.setDefaultCfg({maskAlpha:0.2,maskAlphaColor:'#00f'})
 			<br />
 			<br />组件的默认配置（对于没有设定的项将采用该配置项的默认值）：
@@ -355,12 +355,12 @@
 			<br /><br />&nbsp;&nbsp;&nbsp;//按钮文本，可通过自定义这些属性实现本地化
 			<br />&nbsp;&nbsp;&nbsp;closeTxt: '关闭',
 			<br />&nbsp;&nbsp;&nbsp;okTxt:' 确 定 ',
-			<br />&nbsp;&nbsp;&nbsp;cancelTxt:' 取 消 ',	
+			<br />&nbsp;&nbsp;&nbsp;cancelTxt:' 取 消 ',
 			<br />&nbsp;&nbsp;&nbsp;msgCls:'ym-content'		//消息内容的样式
-			<br />&nbsp;&nbsp;&nbsp;minBtn:false,			//不显示最小化按钮	
+			<br />&nbsp;&nbsp;&nbsp;minBtn:false,			//不显示最小化按钮
 			<br />&nbsp;&nbsp;&nbsp;minTxt:'最小化',
 			<br />&nbsp;&nbsp;&nbsp;maxBtn:false,			//不显示最大化按钮
-			<br />&nbsp;&nbsp;&nbsp;maxTxt:'最大化'   
+			<br />&nbsp;&nbsp;&nbsp;maxTxt:'最大化'
 			<br />&nbsp;&nbsp;&nbsp;allowSelect:false,		//是否允许选择消息框内容，默认不允许
 			<br />&nbsp;&nbsp;&nbsp;allowRightMenu:false	//是否允许在消息框使用右键，默认不允许
 		   <br />}
@@ -414,7 +414,7 @@
 				<li><strong>okTxt：</strong>确定按钮的文本描述，默认为“确定”</li>
 				<li><strong>cancelTxt：</strong>取消按钮的文本描述，默认为“取消”</li>
 				<li><strong>closeTxt：</strong>关闭按钮的文本描述（鼠标放在关闭按钮上时显示），默认为“关闭”</li>
-	
+
 				<li><strong>minTxt：</strong>最小化按钮的文本描述，默认为“最小化”</li>
 				<li><strong>maxTxt：</strong>最大化按钮的文本描述，默认为“最大化”<br /><br /></li>
 
@@ -442,7 +442,7 @@
 
 	<dd><span class='prop'>resizeWin(w,h)：</span>通过程序动态修改窗口的大小。参数：w：宽度，h:高度<br />
 		如：ymPrompt.resizeWin(400,300);	//修改弹出框宽度为400px，高度为300px<br /><br /><dd>
-	
+
 	<dd><span class='prop'>doHandler(sign,autoClose)：</span>模拟触发某个按钮的点击事件。参数sign:传给回调函数的标识，autoClose:是否自动关闭窗口（默认采用全局配置）<br />
 		如：ymPrompt.doHandler('ok',false);	//触发确定按钮的点击事件，并且执行完回调函数后不关闭窗口<br /><br /><dd>
 	<dd><span class='prop'>getButtons()：</span>获取当前弹出窗口的所有按钮对象，返回结果是一个对象集合(数组)。<br />
@@ -465,7 +465,7 @@
 		function en(){
 			ymPrompt.setDefaultCfg({title:'Default Title', message:"Default Message",okTxt:' OK ',cancelTxt:' Cancel ',closeTxt:'Close',minTxt:'Minimize',maxTxt:'Maximize'});
 		}
-		
+
 		function slideHd(){
 			ymPrompt.alert('看到效果了吗？');
 		}
