@@ -2,9 +2,11 @@ ymPrompt消息提示组件 4.1
 ===============================
 
 ## 组件说明
-&nbsp;&nbsp;&nbsp;&nbsp;在web开发中，对于浏览器默认的消息提示框（如alert,confirm等）外观无法控制，同时我们经常希望能实现一些window.open之类的弹出框，但window.open弹出框存在诸多问题，如可能被拦截，界面不美观等。
-<br>
-为了实现更好的界面效果和控制，于是模拟系统的消息提示框及弹出窗口实现了该组件。在外观上可以通过css进行完全的控制。
+&nbsp;&nbsp;&nbsp;&nbsp;在web开发中，对于浏览器默认的消息提示框（如alert,confirm等）外观无法控制，同时我们经常希望能实现一些window.open之类的弹出框，但window.open弹出框存在诸多问题，如可能被拦截，界面不美观等。  
+&nbsp;&nbsp;&nbsp;&nbsp;为了实现更好的界面效果和控制，于是模拟系统的消息提示框及弹出窗口实现了该组件。在外观上可以通过css进行完全的控制。
+
+## demo地址
+http://ajaxbbs.net/ymPrompt/demo.html
 
 ## 组件介绍
 1. 调用简单，直接使用ymPrompt.alert()的方式调用，传入相应的参数即可。
@@ -28,6 +30,8 @@ ymPrompt消息提示组件 4.1
 19. 支持连续多次调用弹出框，组件按照调用顺序显示（关闭当前弹出后自动显示下一个弹出）
 20. 支持配置最大化、最小化、关闭按钮是否显示。
 
+## 更新日志
+https://github.com/yemoo/ymPrompt/blob/master/changelog.md
 
 ## 调用方法及参数说明:
 1. 在页面中引入ymPrompt.js。如：`<script type="text/javascript" src="ymPrompt.js"></script>`
@@ -70,7 +74,7 @@ ymPrompt.win(参数) //自定义窗口类型
 各参数意义：c:页面中间,l:页面左侧,t:页面顶部,r:页面右侧,b:页面顶部,lt:左上角,rt:右上角,lb:左下角,rb:右下角  
 **winAlpha：**弹出窗体拖动时的透明度，默认为0.8  
 // 以下三个参数主要用于win方法（当然你也可以通过设定这些覆盖前面四个消息类型的默认属性）。  
-**iframe：**是否使用iframe方法加载内容，该属性如果为true或者object，组件则尝试将message内容作为url进行加载(如果属性值为一个object，则将object的内容添加为iframe的属性，如`iframe:{id:'myId',name:'myName',src:'http://www.baidu.com'}` 则iframe的id为myId,name为myName,src为http://www.baidu.com)。默认为false。 
+**iframe：**是否使用iframe方法加载内容，该属性如果为true或者object，组件则尝试将message内容作为url进行加载(如果属性值为一个object，则将object的内容添加为iframe的属性，如`iframe:{id:'myId',name:'myName',src:'http://www.baidu.com'}` 则iframe的id为myId,name为myName,src为http://www.baidu.com)。默认为false。
 **icoCls：**图标类型。传入的内容为className，具体写法可以参考ymprompt.css中对图标的定义方式。默认为空。  
 **btn：**按钮定义。传入的是数组形式。每个按钮的格式为['按钮文本','按钮标识']，如`[['确定','ok'],['取消','cancel'],['关闭','close']]等。注意单个按钮应该是这样的：[['确定','ok']] `  
 **closeBtn：**是否显示关闭按钮，默认为true（显示）。  
